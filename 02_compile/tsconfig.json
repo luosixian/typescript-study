@@ -1,0 +1,60 @@
+{
+    /* 
+    "include":用来指定哪些ts文件需要被编译
+    "exclude":用来指定哪些ts文件不需要被编译，例如node_modules
+    "extends":继承别的配置文件
+    "files":要编译哪些文件直接一个一个全列出来
+    */
+    "include": [
+        "./**/*"
+    ],
+    "compilerOptions": {
+        // 指定编译出来的ES版本，默认ES3
+        "target": "ES6",
+
+        // module 指定使用的模块化规范
+        //"module": "ES6",
+
+        // 指定项目中用哪些库,这个一般不动
+        //"lib": ["DOM", "ES6"]
+
+        // 指定编译后的代码放哪，这里就是新生成一个dist文件来存放
+        "outDir": "./dist",
+
+        // 将代码合并为一个文件
+        // 设置"outFile"后，所有全局作用域中的代码合并到一个文件
+        //"outFile": "./dist/app.js",
+
+        // 是否对js文件进行编译，默认false
+        "allowJs": false,
+
+        // 是否检查js代码是否符合规范，默认false
+        // 必须搭配 "allowJs": true
+        "checkJs": false,
+
+        // 是否移除注释
+        "removeComments": true,
+
+        // 不生成编译后的文件
+        // 不想编译只想检查语法时可以用
+        //"noEmit": true,
+
+        // 但有error时不生成编译文件
+        "noEmitOnError": false,
+
+        // 所有严格检查的总开关,这个为true，下面全是true
+        "strict": false,
+
+        // 设置编译后的文件是否使用严格模式
+        "alwaysStrict": true,
+
+        // 不允许隐式any类型
+        "noImplicitAny": true,
+
+        // 不允许隐式类型的this
+        "noImplicitThis": true,
+
+        // 严格的检查空值
+        "strictNullChecks": true,
+    }
+}
