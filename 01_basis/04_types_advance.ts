@@ -26,3 +26,38 @@ let d: (a: number, b: number) => number
 d = (n1, n2) => {
     return n1 + n2
 }
+
+let e: string[]; //数组里必须全是string
+//e = ['123', '123', 2] //报错
+
+let f: number[];
+let g: Array<number> //两个等效，都是必须全是数字的数组
+
+let h: [string, number] //元组：固定长度的数组
+//必须有且只有两个，且类型必须对应
+//h = [123, '123'] //类型不对应，报错
+
+enum Gender { //枚举：就是把所有的可能情况给列出来
+    Male,
+    Female
+}
+
+let i: { name: string, gender: Gender };
+i = {
+    name: '逆天',
+    gender: Gender.Male
+}
+
+console.log(i.gender === Gender.Male);
+
+// &表示必须同时满足
+let j: { name: string } & { age: number };
+j = {
+    name: '逆天',
+    age: 18
+}
+
+type myType = 1 | 2 | 3 | 4 | 5;
+let k: myType;
+let l: myType;
+//k = 6 //报错
